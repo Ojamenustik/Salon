@@ -10,6 +10,8 @@
     CONSTRAINT [PK_Pracownik] PRIMARY KEY CLUSTERED ([PracownikId] ASC),
     CHECK ([DataZatrudnienia]<=getdate()),
     CONSTRAINT [FK_Pracownik_Adres] FOREIGN KEY ([Adres]) REFERENCES [dbo].[Adres] ([AdresId]),
-    CONSTRAINT [UQ_PracownikPESEL] UNIQUE NONCLUSTERED ([PESEL] ASC)
+    CONSTRAINT [UQ_Pracownik_PESEL] UNIQUE NONCLUSTERED ([PESEL] ASC)
 );
+
+
 
