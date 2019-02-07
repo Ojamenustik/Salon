@@ -64,6 +64,8 @@
     <Folder Include="Security\" />
     <Folder Include="Serwis\" />
     <Folder Include="Serwis\Tables\" />
+    <Folder Include="rapOp\" />
+    <Folder Include="rapOp\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Zamowienie.sql" />
@@ -85,5 +87,10 @@
     <Build Include="Serwis\Tables\Zamowienie.sql" />
     <Build Include="Serwis\Tables\Usluga.sql" />
     <Build Include="Security\Serwis.sql" />
+    <Build Include="rapOp\Views\v_ZamowieniaPracownikow.sql" />
+    <Build Include="rapOp\Views\v_ModeleBrakZamowien.sql" />
+    <Build Include="rapOp\Views\v_ZamowieniaZRabatem.sql" />
+    <Build Include="rapOp\Views\v_ZamowieniaDlaMarki.sql" />
+    <Build Include="Security\rapOp.sql" />
   </ItemGroup>
 </Project>
