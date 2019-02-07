@@ -1,0 +1,6 @@
+﻿CREATE TABLE [HR].[Zespol] (
+    [Zespol] NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_Zespol] PRIMARY KEY CLUSTERED ([Zespol] ASC),
+    UNIQUE NONCLUSTERED ([Zespol] ASC)
+);
+
