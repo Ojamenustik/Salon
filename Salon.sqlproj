@@ -59,6 +59,11 @@
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
+    <Folder Include="HR\" />
+    <Folder Include="HR\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="Serwis\" />
+    <Folder Include="Serwis\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Zamowienie.sql" />
@@ -68,5 +73,17 @@
     <Build Include="dbo\Tables\Klient.sql" />
     <Build Include="dbo\Tables\Cennik.sql" />
     <Build Include="dbo\Tables\Adres.sql" />
+    <Build Include="HR\Tables\StanowiskoPracownika.sql" />
+    <Build Include="HR\Tables\ZespolPracownika.sql" />
+    <Build Include="HR\Tables\Zespol.sql" />
+    <Build Include="HR\Tables\Stanowisko.sql" />
+    <Build Include="HR\Tables\Wynagrodzenie.sql" />
+    <Build Include="HR\Tables\Wyplata.sql" />
+    <Build Include="Security\HR.sql" />
+    <Build Include="Serwis\Tables\HistoriaZamowienia.sql" />
+    <Build Include="Serwis\Tables\Status.sql" />
+    <Build Include="Serwis\Tables\Zamowienie.sql" />
+    <Build Include="Serwis\Tables\Usluga.sql" />
+    <Build Include="Security\Serwis.sql" />
   </ItemGroup>
 </Project>
