@@ -1,4 +1,4 @@
-﻿CREATE TABLE [HR].[Wyplata] (
+﻿CREATE TABLE [HR].[DimWyplata] (
     [Wyplata_Id]   INT          IDENTITY (1, 1) NOT NULL,
     [Pracownik_Id] INT          NOT NULL,
     [KwotaWyplaty] SMALLMONEY   NOT NULL,

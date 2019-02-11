@@ -1,4 +1,4 @@
-﻿CREATE TABLE [HR].[Wynagrodzenie] (
+﻿CREATE TABLE [HR].[DimWynagrodzenie] (
     [Wynagrodzenie_Id]   INT   IDENTITY (1, 1) NOT NULL,
     [Pracownik_Id]       INT   NOT NULL,
     [KwotaWynagrodzenia] MONEY NOT NULL,

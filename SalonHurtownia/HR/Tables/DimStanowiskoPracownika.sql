@@ -1,4 +1,4 @@
-﻿CREATE TABLE [HR].[StanowiskoPracownika] (
+﻿CREATE TABLE [HR].[DimStanowiskoPracownika] (
     [Pracownik_Id] INT           NOT NULL,
     [Stanowisko]   NVARCHAR (50) NOT NULL,
     [OkresOd]      DATE          NOT NULL,

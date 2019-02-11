@@ -62,16 +62,20 @@
     <Folder Include="HR\" />
     <Folder Include="HR\Tables\" />
     <Folder Include="Security\" />
+    <Folder Include="Serwis\" />
+    <Folder Include="Serwis\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\DimZamowienie.sql" />
     <Build Include="dbo\Tables\DimPracownik.sql" />
     <Build Include="dbo\Tables\DimKlient.sql" />
-    <Build Include="HR\Tables\StanowiskoPracownika.sql" />
-    <Build Include="HR\Tables\ZespolPracownika.sql" />
-    <Build Include="HR\Tables\Wynagrodzenie.sql" />
-    <Build Include="HR\Tables\Wyplata.sql" />
     <Build Include="Security\Serwis.sql" />
     <Build Include="Security\HR.sql" />
+    <Build Include="Serwis\Tables\DimHistoriaZamowien.sql" />
+    <Build Include="HR\Tables\DimZespolPracownika.sql" />
+    <Build Include="HR\Tables\DimWyplata.sql" />
+    <Build Include="HR\Tables\DimWynagrodzenie.sql" />
+    <Build Include="HR\Tables\DimStanowiskoPracownika.sql" />
+    <Build Include="dbo\Tables\Zamowienie.sql" />
   </ItemGroup>
 </Project>
