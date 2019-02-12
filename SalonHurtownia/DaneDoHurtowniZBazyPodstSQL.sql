@@ -1,5 +1,5 @@
-SET IDENTITY_INSERT [Salon_hurtownia].[dbo].[DimPracownik] ON;
-INSERT INTO [Salon_hurtownia].[dbo].[DimPracownik]
+SET IDENTITY_INSERT [SalonHurtownia].[dbo].[DimPracownik] ON;
+INSERT INTO [SalonHurtownia].[dbo].[DimPracownik]
 		
 	([Pracownik_Id],    
     [PESEL]        ,    
@@ -28,14 +28,13 @@ SELECT	 [PracownikId],
     [Miasto]           ,
     [Kraj]             ,
     [KodPocztowy]
-FROM	  	[Salon_1].[dbo].[Pracownik]
-INNER JOIN	[Salon_1].[dbo].[Adres]		ON [Salon_1].[dbo].[Adres].[AdresId] = [Salon_1].[dbo].[Pracownik].[Adres]
-SET IDENTITY_INSERT [Salon_hurtownia].[dbo].[DimPracownik] OFF;
+FROM	  	[Salon].[dbo].[Pracownik]
+INNER JOIN	[Salon].[dbo].[Adres]		ON [Salon].[dbo].[Adres].[AdresId] = [Salon].[dbo].[Pracownik].[Adres]
+SET IDENTITY_INSERT [SalonHurtownia].[dbo].[DimPracownik] OFF;
 GO
---------ok
 
-SET IDENTITY_INSERT [Salon_hurtownia].[dbo].[DimKlient] ON;
-INSERT INTO [Salon_hurtownia].[dbo].[DimKlient]
+SET IDENTITY_INSERT [SalonHurtownia].[dbo].[DimKlient] ON;
+INSERT INTO [SalonHurtownia].[dbo].[DimKlient]
 		([Klient_Id]         ,
 		 [NrDowoduOsobistego],
 		 [Imie]              ,
@@ -63,15 +62,13 @@ SELECT   [KlientId]         ,
 		 [Miasto]            ,
 		 [Kraj]              ,
 		 [KodPocztowy]   
-FROM		[Salon_1].[dbo].[Klient]	
-INNER JOIN	Salon_1.[dbo].[Adres] ON [Salon_1].[dbo].[Adres].[AdresId] = [Salon_1].[dbo].[Klient].[Adres]
-SET IDENTITY_INSERT [Salon_hurtownia].[dbo].[DimKlient] OFF;
+FROM		[Salon].[dbo].[Klient]	
+INNER JOIN	Salon.[dbo].[Adres] ON [Salon].[dbo].[Adres].[AdresId] = [Salon].[dbo].[Klient].[Adres]
+SET IDENTITY_INSERT [SalonHurtownia].[dbo].[DimKlient] OFF;
 GO
 
-------------------------ok
-
-SET IDENTITY_INSERT [Salon_hurtownia].[HR].[DimWyplata] ON;
-INSERT INTO [Salon_hurtownia].[HR].[DimWyplata]
+SET IDENTITY_INSERT [SalonHurtownia].[HR].[DimWyplata] ON;
+INSERT INTO [SalonHurtownia].[HR].[DimWyplata]
            ([Wyplata_Id]  ,
 		   	[Pracownik_Id],
 		   	[KwotaWyplaty],
@@ -83,14 +80,12 @@ SELECT [WyplataId]  ,
 		   	[KwotaWyplaty],
 		   	[TypWyplaty]  ,
 		   	[WyplataOkres]
-  FROM [Salon_1].[HR].[Wyplata]
-SET IDENTITY_INSERT [Salon_hurtownia].[HR].[DimWyplata] OFF;
+  FROM [Salon].[HR].[Wyplata]
+SET IDENTITY_INSERT [SalonHurtownia].[HR].[DimWyplata] OFF;
 GO
 
--------------ok
-
-SET IDENTITY_INSERT [Salon_hurtownia].[HR].[DimWynagrodzenie] ON;
-INSERT INTO [Salon_hurtownia].[HR].[DimWynagrodzenie]
+SET IDENTITY_INSERT [SalonHurtownia].[HR].[DimWynagrodzenie] ON;
+INSERT INTO [SalonHurtownia].[HR].[DimWynagrodzenie]
            ([Wynagrodzenie_Id]   ,
 		   	[Pracownik_Id]       ,
 		   	[KwotaWynagrodzenia] ,
@@ -102,24 +97,20 @@ SELECT [WynagrodzenieId]   ,
 		   	[KwotaWynagrodzenia] ,
 		   	[WynagrodzenieOd]    ,
 		   	[WynagrodzenieaDo]
-FROM [Salon_1].[HR].[Wynagrodzenie]
-SET IDENTITY_INSERT [Salon_hurtownia].[HR].[DimWynagrodzenie] OFF;
+FROM [Salon].[HR].[Wynagrodzenie]
+SET IDENTITY_INSERT [SalonHurtownia].[HR].[DimWynagrodzenie] OFF;
 GO
 
-----------------------------ok
-
-INSERT INTO [Salon_hurtownia].[HR].[DimZespolPracownika]
+INSERT INTO [SalonHurtownia].[HR].[DimZespolPracownika]
            ([Pracownik_Id],
 		   	[Zespol]      
 		   )
 SELECT [PracownikId],
 		   	[Zespol]
-FROM [Salon_1].[HR].[ZespolPracownika]
+FROM [Salon].[HR].[ZespolPracownika]
 GO
 
-----------------ok
-
-INSERT INTO [Salon_hurtownia].[HR].[DimStanowiskoPracownika]
+INSERT INTO [SalonHurtownia].[HR].[DimStanowiskoPracownika]
            ([Pracownik_Id],
 		   	[Stanowisko],  
 		   	[OkresOd],     
@@ -129,13 +120,11 @@ SELECT [PracownikId],
 		   	[ZajmowaneStanowisko],  
 		   	[OkresOd],     
 		   	[OkresDo]
-FROM [Salon_1].[HR].[StanowiskoPracownika]
+FROM [Salon].[HR].[StanowiskoPracownika]
 GO
 
-----------------------ok
-
-SET IDENTITY_INSERT [Salon_hurtownia].[dbo].[Zamowienie] ON;
-INSERT INTO [Salon_hurtownia].[dbo].[Zamowienie]
+SET IDENTITY_INSERT [SalonHurtownia].[dbo].[Zamowienie] ON;
+INSERT INTO [SalonHurtownia].[dbo].[Zamowienie]
            ([Zamowienie_Id]   ,  
 		   	[Pracownik_Id]    ,  
 		   	[Klient_Id]       ,  
@@ -178,19 +167,17 @@ SELECT [ZamowienieId]   ,
 		   	[ObowiazujeOd]    ,  
 		   	[ObowiazujeDo]
 
-FROM		[Salon_1].[dbo].[Zamowienie]
+FROM		[Salon].[dbo].[Zamowienie]
 INNER JOIN	[Model]	AS m	ON m.[ModelId]		= [Zamowienie].[ModelId]
 INNER JOIN  [Marka]	AS ma	ON ma.[MarkaId]		= m.[ModelId]
 INNER JOIN  [Cennik] AS c	ON c.[ModelId]	= m.[ModelId]
 WHERE [ObowiazujeDo]   > [Zamowienie].[DataOdbioru]
   AND [ObowiazujeOd] <= [Zamowienie].[DataOdbioru]
-SET IDENTITY_INSERT [Salon_hurtownia].[dbo].[Zamowienie] OFF;
+SET IDENTITY_INSERT [SalonHurtownia].[dbo].[Zamowienie] OFF;
 GO
 
-----------------------------ok
-
-SET IDENTITY_INSERT [Salon_hurtownia].[Serwis].[DimHistoriaZamowien] ON;
-INSERT INTO [Salon_hurtownia].[Service].[DimHistoriaZamowien]
+SET IDENTITY_INSERT [SalonHurtownia].[Serwis].[DimHistoriaZamowien] ON;
+INSERT INTO [SalonHurtownia].[Service].[DimHistoriaZamowien]
 ([HistoriaZamowien_Id]  ,
  [Zamowienie_Id]        ,
  [Pracownik_Id]         ,
@@ -208,10 +195,10 @@ SELECT [HistoriaZamowien_Id]  ,
 [HistoriaZamowienOpis]  ,		   
 [ZamowienieCena]        ,		   
 [UslugaNazwa]       
-FROM [Salon_1].[Serwis].[HistoriaZamowienia]
-INNER JOIN [Salon_1].[Serwis].[Zamowienie]	ON [Salon_1].[Serwis].[Zamowienie].[ZamowienieId]   = [Salon_1].[Serwis].[HistoriaZamowienia].[ZamowienieId]
-INNER JOIN [Salon_1].[Serwis].[Usluga]	ON [Salon_1].[Serwis].[Usluga].[UslugaId] = [Salon_1].[Serwis].[Zamowienie].[UslugaId]
-SET IDENTITY_INSERT [Salon_hurtownia].[Serwis].[DimHistoriaZamowien] OFF;
+FROM [Salon].[Serwis].[HistoriaZamowienia]
+INNER JOIN [Salon].[Serwis].[Zamowienie]	ON [Salon].[Serwis].[Zamowienie].[ZamowienieId]   = [Salon].[Serwis].[HistoriaZamowienia].[ZamowienieId]
+INNER JOIN [Salon].[Serwis].[Usluga]	ON [Salon].[Serwis].[Usluga].[UslugaId] = [Salon].[Serwis].[Zamowienie].[UslugaId]
+SET IDENTITY_INSERT [SalonHurtownia].[Serwis].[DimHistoriaZamowien] OFF;
 GO
 
 -------------------------------------ok
