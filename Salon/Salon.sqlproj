@@ -92,5 +92,11 @@
     <Build Include="rapOp\Views\v_ZamowieniaZRabatem.sql" />
     <Build Include="rapOp\Views\v_ZamowieniaDlaMarki.sql" />
     <Build Include="Security\rapOp.sql" />
+    <Build Include="rapOp\Views\v_wynagrodzenieZespolu.sql" />
+    <Build Include="rapOp\Views\v_SumaZamowienZespolu.sql" />
+    <Build Include="rapOp\Views\v_pracownicyStatusyZakonczon.sql" />
+    <Build Include="rapOp\Views\v_najwyzszaPremia.sql" />
+    <Build Include="rapOp\Views\v_najczesciejNaprawianeAuta.sql" />
+    <Build Include="rapOp\Views\v_iloscKazdejUslugi.sql" />
   </ItemGroup>
 </Project>
