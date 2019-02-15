@@ -1,7 +1,6 @@
 SET IDENTITY_INSERT [SalonHurtownia].[dbo].[DimPracownik] ON;
 INSERT INTO [SalonHurtownia].[dbo].[DimPracownik]
-		
-	([Pracownik_Id],    
+([Pracownik_Id],    
     [PESEL]        ,    
     [Imie]         ,    
     [Telefon]      ,    
@@ -200,5 +199,3 @@ INNER JOIN [Salon].[Serwis].[Zamowienie]	ON [Salon].[Serwis].[Zamowienie].[Zamow
 INNER JOIN [Salon].[Serwis].[Usluga]	ON [Salon].[Serwis].[Usluga].[UslugaId] = [Salon].[Serwis].[Zamowienie].[UslugaId]
 SET IDENTITY_INSERT [SalonHurtownia].[Serwis].[DimHistoriaZamowien] OFF;
 GO
-
--------------------------------------ok
